@@ -1,38 +1,227 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Prompt',sans-serif;
+    font-family: 'Prompt', sans-serif;
 }
-body{
+
+body {
     line-height: 1.6;
+    background-color: floralwhite;
+
 }
-h1{
-    font-size: 40px;
+
+.topheading {
+    font-size: 60px;
     font-weight: 900;
     text-align: center;
-    margin: 40px 0 60px 0;
+    margin: 30px 0 50px 0;
     color: transparent;
     background-image: url(https://images.unsplash.com/photo-1440749395129-76b2ae3df520?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
     background-size: contain;
-    /* background-repeat: no-repeat; */
     background-clip: text;
     -webkit-background-clip: text;
 }
-form{
+
+.newHead {
+    color: rgb(165, 12, 4);
+    margin: 1% 11% 1% 11%;
+}
+/* for form and search input and search button */
+form {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
+    margin: 50px;
 }
-#search-input{
-    width: 60%;
+
+
+#search-input {
+    width: 70%;
     max-width: 400px;
     padding: 10px 20px;
     border: none;
-    box-shadow: 0 0 6px rgb(0, 0, 0,0.2);
-    border-radius: 5px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
     font-size: 18px;
     color: #333;
+    outline: none;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #ca2804;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-left: 0px;
+    cursor: pointer;
+    transition: opacity 0.2 ease-in-out;
+}
+
+#search-button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.search-results {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-result {
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+
+}
+
+.search-result img {
+    width: 100%;
+    height: 200%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    transition: 1s;
+
+}
+
+.search-result img:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+
+}
+
+.search-result a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 1px;
+    width: 140px;
+    margin: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ca2804;
+    transition: 0.4s ease-in-out;
+}
+
+.search-result:hover a {
+    color: #ff0000;
+    outline: 1px solid wheat;
+    width: 150px;
+}
+
+.heading {
+    font-size: 19px;
+    color: #333;
+    display: block;
+    padding: 0px 10px 0px 10px;
+    /* margin-top: 1px; */
+    text-transform: capitalize;
+}
+
+.desc {
+    font-size: 15px;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+/* for explore more button */
+#show-more-button {
+    background-color: #ca2804;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.2 ease-in-out;
+    transition: 0.5s;
+}
+
+#show-more-button:hover {
+    opacity: 0.9;
+    padding: 10px 34px;
+
+}
+/* ---------------------------------------- */
+/* for responsive */
+@media (max-width:768px) {
+    .search-results {
+        padding: 20px;
+    }
+
+    .search-result {
+        width: 45%;
+    }
+}
+
+@media (max-width:480px) {
+    .search-result {
+        width: 100%;
+    }
+}
+
+/* ===========================for scroll bottom to top =====================  */
+html {
+    scroll-behavior: smooth;
+}
+
+.scrollButton {
+    background: rgba(234, 205, 205, 0.459);
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #ca2804;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+
+
+}
+
+.scrollButton:hover {
+    transition: all -6s ease-in-out;
+    background-color: #ca2804;
+    color: rgb(255, 255, 255);
+    width: 51px;
+    height: 51px;
+    transform: rotate(360deg);
+}
+
+.scrollButton.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+/* for footer */
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color:#ca2804;
 }
