@@ -9,7 +9,7 @@
 
 body {
     line-height: 1.6;
-    background-color: floralwhite;
+    background-color: rgb(255, 255, 255);
 
 }
 
@@ -19,7 +19,7 @@ body {
     text-align: center;
     margin: 30px 0 50px 0;
     color: transparent;
-    background-image: url(https://images.unsplash.com/photo-1440749395129-76b2ae3df520?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+    background-image: url("img/img2.jpg");
     background-size: contain;
     background-clip: text;
     -webkit-background-clip: text;
