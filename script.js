@@ -46,6 +46,8 @@ async function searchNews() {
       articleTitle.style.fontSize = "19px";
       articleTitle.style.padding = "0px 10px 0px 10px";
 
+     
+
       //it will create description of some content
       const articleContent = document.createElement("p");
       articleContent.textContent = article.content.substring(0, 150) + "...";
@@ -62,12 +64,18 @@ async function searchNews() {
       articleLink.target = "_blank";
       articleLink.textContent = "Read More";
 
+      const articleWrapper1 = document.createElement("section");
+    //   articleWrapper1.classList.add("marquee");
+      const articleTitleMarq = document.createElement("h4");
+      articleTitleMarq.textContent = article.title;
+
       // Append the article title and link to the search results
       articleWrapper.appendChild(articleImage);
       articleWrapper.appendChild(articleTitle);
       articleWrapper.appendChild(articleContent);
       articleWrapper.appendChild(articleLink);
       searchResults.appendChild(articleWrapper);
+      articleWrapper1.appendChild(articleTitleMarq);
     });
 
     // Increment the page number

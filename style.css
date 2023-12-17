@@ -12,14 +12,25 @@ body {
     background-color: rgb(255, 255, 255);
 
 }
+marquee{
+    color: #ca2804;
+}
+.logo{
+    width:100%;
+    height: 100%;
+}
+.logo img{
+    width: 320px;
+    position: relative;
+}
 
 .topheading {
     font-size: 60px;
     font-weight: 900;
     text-align: center;
-    margin: 30px 0 50px 0;
+    margin: -250px 0 50px 0;
     color: transparent;
-    background-image: url("img/img2.jpg");
+    background-image: url("img/img4.webp");
     background-size: contain;
     background-clip: text;
     -webkit-background-clip: text;
@@ -82,10 +93,16 @@ form {
     margin-bottom: 60px;
     width: 30%;
     height: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 0px 16px 5px  rgb(234, 238, 234);
     overflow: hidden;
-
+    transition: all 0.3s;
+    border-bottom: 3px solid #ffffff;
+    position: relative;
+}
+.search-result:hover{
+    transform: translateY(-5px);
+    border-bottom: 3px solid #ff0000;
 }
 
 .search-result img {
@@ -219,9 +236,34 @@ html {
     opacity: 1;
 }
 /* for footer */
-footer{
-    text-align: center;
+footer {
     padding: 20px;
     background-color: rgb(0, 0, 0);
     color:#ca2804;
+}
+footer p{
+    text-align: center;
+    
+}
+footer span{
+    font-size: 30px;
+    color: #e1bb00;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'monoscope',sans-serif;
+    
+}
+footer .cover{
+    border: 3px solid #e20303;
+    padding: 5px 0px 5px 0px;
+}
+footer .cover .news{
+    background-color: #e20303;
+    color: white;
+    padding: 5px;
+}
+footer .cover .api{
+    color: white;
+    padding: 5px;
+    text-align: center;
 }
