@@ -183,6 +183,9 @@ form {
     .search-results {
         padding: 20px;
     }
+    .logo img{
+        margin-left: -100px;
+    }
 
     .search-result {
         width: 45%;
@@ -192,6 +195,9 @@ form {
 @media (max-width:480px) {
     .search-result {
         width: 100%;
+    }
+    .topheading{
+        margin-top: -50px;
     }
 }
 
